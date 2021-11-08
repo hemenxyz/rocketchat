@@ -1,0 +1,16 @@
+
+volumes:
+  - name:  static
+    mount: /app_data/static/
+envs:
+  - MONGO_OPLOG_URL: mongodb://db:27017/local
+
+
+
+
+services:
+  - mongodb:
+      tag: 3.6
+      volumes:
+        - name: mongodb_vol
+          mount: /data/db
