@@ -93,5 +93,7 @@ ENV DEPLOY_METHOD=docker-official \
     Accounts_AvatarStorePath=/app/uploads
 
 EXPOSE 3000
+COPY start.sh start.sh
 
+RUN chmod +x /app/start.sh
 ENTRYPOINT ["./start.sh"]
