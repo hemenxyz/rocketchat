@@ -81,7 +81,7 @@ RUN set -eux \
 &&  chown -R rocketchat:rocketchat /app
 
 EXPOSE 3000
-COPY start.sh start.sh
+COPY start.sh /app/bundle/start.sh
 
 RUN chmod +x /app/bundle/start.sh
 
