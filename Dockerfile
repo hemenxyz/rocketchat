@@ -1,5 +1,7 @@
 from rocket.chat
-EXPOSE 3000
-RUN chmod +x /app/start.sh
+WORKDIR /app
 
+EXPOSE 3000
+COPY start.sh start.sh
+RUN chmod +x /app/start.sh
 ENTRYPOINT ["./start.sh"]
