@@ -1,9 +1,22 @@
 #!/bin/bash
 cd /app/bundle
 
-for i in `seq 1 30`; do
-    node main.js &&
-    s=$? && break || s=$?;
-    echo \"Tried $$i times. Waiting 5 secs...\";
-    sleep 5;
-done; (exit $s)
+node main.js
+echo 1
+sleep 5;
+
+node main.js
+echo 2
+sleep 5;
+
+node main.js
+echo 3
+sleep 5;
+
+node main.js
+echo 4
+sleep 15;
+
+node main.js
+echo 5
+sleep 5;
