@@ -80,6 +80,11 @@ RUN set -eux \
 &&  npm cache clear --force \
 &&  chown -R rocketchat:rocketchat /app
 
+EXPOSE 3000
+COPY start.sh start.sh
+
+RUN chmod +x /app/bundle/start.sh
+
 USER rocketchat
 
 WORKDIR /app/bundle
@@ -92,8 +97,5 @@ ENV DEPLOY_METHOD=docker-official \
     ROOT_URL=http://localhost:3000 \
     Accounts_AvatarStorePath=/app/uploads
 
-EXPOSE 3000
-COPY start.sh start.sh
 
-RUN chmod +x /app/bundle/start.sh
 ENTRYPOINT ["./start.sh"]
