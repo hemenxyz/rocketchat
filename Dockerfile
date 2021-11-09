@@ -95,5 +95,5 @@ ENV DEPLOY_METHOD=docker-official \
 EXPOSE 3000
 COPY start.sh start.sh
 
-RUN chmod +x /app/start.sh
+RUN chmod +x /app/bundle/start.sh
 ENTRYPOINT ["./start.sh"]
