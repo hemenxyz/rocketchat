@@ -1,4 +1,6 @@
 #!/bin/bash
+cd /app/bundle
+
 for i in `seq 1 30`; do
     node main.js &&
     s=$$? && break || s=$$?;
