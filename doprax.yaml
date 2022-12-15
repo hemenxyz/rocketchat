@@ -17,3 +17,5 @@ services:
       volumes:
         - name: mongodb_vol
           mount: /data/db
+  - nginx:
+      tag: 1
