@@ -16,10 +16,7 @@ services:
   
   - nginx:
       tag: 3
-      mount: file
+      config_file:
         - source: "./nginx.conf"
-        - mount: "/etc/nginx/nginx.conf"
-        - mode: r
-#       mount: shared_volume
-#         - source: "./nginx.conf"
-#         - mount: "/etc/nginx/nginx.conf"
+          mount: "/etc/nginx/nginx.conf"
+          mode: r
